@@ -5,7 +5,14 @@
 必要モデル
 ・user(deviseのgem使用)
 ・message(rails g channelで作成) #ActionCableの機能
-・
+・セッション管理にRedis
+
+フロントエンド側（外見）は
+javascriptかjQuery、bootstrapなどを使用
+
+作る際にデータベースの設定を -d postgresqlにしてしまった。
+
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
