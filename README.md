@@ -2,6 +2,10 @@
 チャットルーム　サービス概要
 ・社内向けのチャットツール
 
+必要モデル
+・user(deviseのgem使用)
+・message(rails g channelで作成) #ActionCableの機能
+・
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
