@@ -7,7 +7,9 @@
 
 * user(deviseのgem使用)
 
-* message(rails g channelで作成) #ActionCableの機能
+* messageモデル
+
+* talkチャネル(rails g channelで作成) #ActionCableの機能
 
 * セッション管理にRedis
 
