@@ -1,7 +1,7 @@
 <div class="message">
   <div class="chat_circle-avatar">
       <%= image_tag message.user.avatar.to_s %>
-      <em class="chat_username"><%= message.user.username %>
+      <em class="chat_username"><%= message.content %>
   </div>
-  <p><%= message.content %></p>
+  <p><%= message.user.username %></p>
 </div>
