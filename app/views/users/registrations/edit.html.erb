@@ -4,6 +4,11 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
+    <%= f.label :username %><br />
+    <%= f.text_field :username, autofocus: true, autocomplete: "username" %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
@@ -32,14 +37,11 @@
   </div>
 
   <div class="circle-avatar">
-    <% if current_user.persisted? && current_user.avatar? %>
-      <%= image_tag current_user.avatar.to_s %>
-      <label><%= f.check_box :remove_avatar %> 画像を削除</label>
-    <% else %>
-      <%= image_tag 'no_avatar.jpg' %>
-      <%= f.hidden_field :avatar_cache %>
-    <% end %>
+    <%= image_tag current_user.avatar.to_s %>
+    <div class="field">
+      <%= f.label :avatar %><br />
       <%= f.file_field :avatar %>
+    </div>
   </div>
 
   <div class="actions">
