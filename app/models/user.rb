@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :messages, dependent: :destroy
   validates :username, presence: true
   attr_accessor :login
+  mount_uploader :avatar, AvatarUploader
 
   def self.find_first_by_auth_conditions(warden_conditions)
     conditions = warden_conditions.dup
