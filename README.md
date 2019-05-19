@@ -37,3 +37,15 @@ JavaScript周りがかなり大変。jqueryのgem入れ忘れてたのわから�
 
 
 それ以降はbootstrapで表示を整えてherokuでネットにあげたら完成予定。
+
+
+
+5/18 メッセージ機能実装
+
+何故かメッセージが表示されなくなった挙句にusernameが認識されていないためどこがおかしいのか模索。
+
+対策：メッセージの際にusernameもhiddenつけて送る。channelのtalkアクションにuser関係を追加。cabel-connectionにdeviseを参照できるように追加。最終的にはエラーが出てusernameが認識できないと言われてどうしてか悩んだ結果 _message.html.erb_ の表示がmessage.usernameになっていたところをmessage.user.usernameに変更したら直った。そりゃそうだ、messageクラスに付随しているuserクラスのusernameカラム使いたいんだから記載がおかしかった。
+
+seeds.rbを用いて別のユーザーのメッセージも表示しているか、確認できるかなどを確認。できた。
+
+次はcss周りを弄って、自分のコメントは右に表示させメッセージ背景の色を変更するかユーザー設定を変更できるよう機能追加やメッセージの横に画像も表示できるようにするかどっちか。
