@@ -49,3 +49,9 @@ seeds.rbを用いて別のユーザーのメッセージも表示しているか
 次はcss周りを弄って、自分のコメントは右に表示させメッセージ背景の色を変更するかユーザー設定を変更できるよう機能追加やメッセージの横に画像も表示できるようにするかどっちか。
 
 追記：とりあえずavatar（画像）の設定できました。次はomniauthを導入してTwitterとFacebookログイン機能を実装。できたら後はcssやbootstrapで概見整えて完成！
+
+
+5/21 ようやくtwitter-omniauthを使用してコメントできました。
+理由はindexのcurrent_user.usernameがomniauthに適応されない（auth.name.nickname)のようにtwitter-omniauthのnicknameをusernameで渡しても適応されなかったため。
+
+あとはようやくcss,bootstrapです。
