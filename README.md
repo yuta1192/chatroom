@@ -55,3 +55,5 @@ seeds.rbを用いて別のユーザーのメッセージも表示しているか
 理由はindexのcurrent_user.usernameがomniauthに適応されない（auth.name.nickname)のようにtwitter-omniauthのnicknameをusernameで渡しても適応されなかったため。
 
 あとはようやくcss,bootstrapです。
+
+5/22　と思ったけどまずはdeviseで編集できるものを修正
