@@ -18,6 +18,19 @@ class User < ApplicationRecord
     end
   end
 
+  def update_without_current_password(params, *options)
+    params.delete(:current_password)
+
+    if params[:password].blank? && params[:password_confirmation].blank?
+      params.delete(:password)
+      params.delete(:password_confirmation)
+    end
+
+    result = update_attributes(params, *options)
+    clean_up_passwords
+    result
+  end
+
   #omniauth setting
   def self.from_omniauth(auth)
     find_or_create_by(provider: auth["provider"], uid: auth["uid"]) do |user|
@@ -60,7 +73,7 @@ class User < ApplicationRecord
   end
 
   protected
-   
+
     def update_resource(resource, params)
       resource.update_without_current_password(params)
     end
