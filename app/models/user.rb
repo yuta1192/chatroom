@@ -58,4 +58,10 @@ class User < ApplicationRecord
   def self.dummy_email(auth)
     "#{auth.uid}-#{auth.provider}@example.com"
   end
+
+  protected
+   
+    def update_resource(resource, params)
+      resource.update_without_current_password(params)
+    end
 end
