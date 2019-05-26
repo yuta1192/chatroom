@@ -39,9 +39,10 @@ body {
 
 /* ヘッダー部分② */
 #bms_chat_header {
-    padding: 6px;/*隙間調整*/
+    /*padding: 6px;隙間調整*/
+    margin: -15px 0 0 0;
     font-size: 16px;
-    height: 34px;
+    height: 50px;
     background: #ddd;
     border: 1px solid #ccc;
 }
@@ -53,11 +54,12 @@ body {
     #bms_status_icon {
         float: left;/* bms_chat_user_statusに対して左寄せ */
         line-height: 2em;/*高さ調整*/
+        font-size: 25px;
     }
     /* ユーザー名 */
     #bms_chat_user_name {
-        float: left;/* bms_chat_user_statusに対して左寄せ */
-        line-height: 2em;/*高さ調整*/
+        float: right;/* bms_chat_user_statusに対して左寄せ */
+        line-height: 3em;/*高さ調整*/
         padding-left: 8px;
     }
 
