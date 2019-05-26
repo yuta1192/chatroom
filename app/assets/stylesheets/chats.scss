@@ -18,11 +18,14 @@ body {
 
 
 
-.chat_circle-avatar img {
+.chat_circle-avatar  {
+  width: 50px;
+  img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
+  }
 }
 
 .chat_username {
