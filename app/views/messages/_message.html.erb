@@ -2,14 +2,16 @@
             <!--メッセージ１（左側）-->
 <div class="bms_message bms_left">
   <div class="chat_circle-avatar">
-    <%= image_tag message.user.avatar.to_s %>    <p><%= message.user.username %></p>
+    <%= image_tag message.user.avatar.to_s %>
+  </div>
+  <div class="chat_username">
+    <p><%= message.user.username %></p>
+  </div>
   <div class="bms_message_box">
     <div class="bms_message_content">
       <div class="message">
       <div class="bms_message_text"><%= message.content %></div>
-    </div>
-
-  </div>
+      </div>
     </div>
   </div>
 </div>

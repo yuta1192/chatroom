@@ -7,10 +7,7 @@
   <div id="bms_chat_header">
     <div id="bms_status_icon">チャットルーム</div>
     <div id="bms_chat_user_name"><%= link_to 'ユーザー編集', edit_user_registration_path %></div>
-  </div>
 </div>
-<div id="bms_messages">
-
 　<!-- メッセージの部分テンプレート -->
 <div id="messages">
   <%= render @messages %>
@@ -23,4 +20,5 @@
   <!-- <input type="hidden" name="username" value="<#%= username %>"> -->
   </div>
 </form>
+</div>
 </div>
