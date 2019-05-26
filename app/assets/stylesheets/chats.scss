@@ -11,14 +11,29 @@ body {
 }
 
 .chat_circle-avatar img {
+  @if user.id == current_user {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
+  margin-right: auto;
+  }
+  @else {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
 }
 
 .chat_username {
-  align: middle;
+  @if current_user {
+    align: middle;
+  }
+  @else {
+    align: middle;
+    margin-right: auto;
+  }
 }
 
 #your_container{

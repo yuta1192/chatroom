@@ -1,41 +1,8 @@
 <div class="message">
   <div class="chat_circle-avatar">
-      <%= image_tag message.user.avatar.to_s %>
-      <em class="chat_username"><%= message.content %>
+    <%= image_tag message.user.avatar.to_s %>
+    <em class="chat_username">
+    <%= message.content %>
   </div>
   <p><%= message.user.username %></p>
 </div>
-
-<% if !current_user %>
-<div class="bms_message bms_left">
-    <div class="bms_message_box">
-        <div class="bms_message_content">
-            <div class="bms_message_text">
-                <div class="chat_circle-avatar">
-              <%= image_tag message.user.avatar.to_s %>
-              <em class="chat_username"><%= message.content %></div>
-              </div>
-            <p><%= message.user.username %></p>
-        </div>
-    </div>
-</div>
-<div class="bms_clear"></div><!-- 回り込みを解除（スタイルはcssで充てる） -->
-<% end %>
-
-<% if current_user %>
-<!--メッセージ２（右側）-->
-<div class="bms_message bms_right">
-    <div class="bms_message_box">
-        <div class="bms_message_content">
-            <div class="bms_message_text">
-                <div class="chat_circle-avatar">
-              <%= image_tag message.user.avatar.to_s %>
-              <em class="chat_username"><%= message.content %></div>
-              </div>
-            <p><%= current_user.username %></p>
-        </div>
-    </div>
-</div>
-<div class="bms_clear"></div><!-- 回り込みを解除（スタイルはcssで充てる） -->
-</div>
-<% end %>
