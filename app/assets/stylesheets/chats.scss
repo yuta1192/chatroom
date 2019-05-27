@@ -10,12 +10,6 @@ body {
     margin: 0;
 }
 
-.scroll {
-  overflow:auto;
-  width: 100%;
-  height: 80%;
-}
-
 
 
 .chat_circle-avatar  {
@@ -82,6 +76,9 @@ body {
     border-right: 1px solid #ddd;
     border-left: 1px solid #ddd;
     background-color: #eee;
+    overflow:auto;
+    width: 100%;
+    height: 80%;
 }
     /* メッセージ全般のスタイル */
     .bms_message {
