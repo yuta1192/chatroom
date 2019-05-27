@@ -144,6 +144,10 @@ vertical-align: top;
     border-bottom: 1px solid #ddd;
     height: 48px;
     padding: 4px;
+    position: fixed;            /* フッターの固定 */
+    bottom: 0px;                /* 位置(下0px) */
+    left: 0px;                  /* 位置(左0px) */
+    width: 100%;                /* 横幅100%　*/
 }
     #bms_send_message{
         width: calc(100% - 75px);/*常に送信ボタンの横幅を引いたサイズに動的に計算*/
