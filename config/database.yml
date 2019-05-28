@@ -79,7 +79,8 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
+
   <<: *default
-  database: chatroom_production
-  username: chatroom
-  password: <%= ENV['CHATROOM_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
